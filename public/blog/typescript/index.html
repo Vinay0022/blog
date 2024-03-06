@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>MyBlog</title>
+</head>
+
+<body>
+  <section class="section">
+    <div class="container">
+      
+<h1 class="title">
+  Typescript
+</h1>
+<p class="subtitle"><strong>2019-11-28</strong></p>
+<h3 id="what-is-typescript">What is Typescript?</h3>
+<hr />
+<ul>
+<li>Typescript offers all features of javascript and some addtional features that is Typescript's <strong>type system</strong>.</li>
+<li>Javascript doesn't do the checking that if what type of data we have assign to the variable but typescript does.</li>
+<li>It reduces the chances of bugs by highlighting the unexpected behaviour of the code.
+<br></li>
+</ul>
+<h3 id="types-by-interface">Types by Interface</h3>
+<hr />
+<ul>
+<li>
+<p>Javascript doesn't enforces strict rules about the type of data a variable should hold.Typescript provides this extra layer that ensures the variable should have only particular type of data. It reduces the chances of errors.</p>
+</li>
+<li>
+<p>e.g.</p>
+<h4 id="typescript">Typescript</h4>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>let helloworld = &quot;hello world&quot;;
+</span><span>helloworld = 2;     ■ type &#39;number&#39; is not assignable to type &#39;string&#39;.
+</span><span>console.log(helloworld);
+</span></code></pre>
+<h4 id="javascript">Javascript</h4>
+<p>In javascript we can't see the error that number is not assignable to type string.</p>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>let helloworld = &quot;hello world&quot;;
+</span><span>helloworld = 2;
+</span><span>console.log(helloworld);
+</span></code></pre>
+</li>
+</ul>
+<h3 id="defining-types">Defining Types</h3>
+<hr />
+<ul>
+<li>
+<p>normally we can define the types a particula object should have in javascript but it again does not provide the strict rule for which data type should it have. In Typescript we can explicitly describe the object's shape by using <strong>interface</strong> declaration.</p>
+<ul>
+<li>Typescript offers all the features of javascript and it adds on top of it it's Type system.</li>
+<li>Javascript have data like number , string but it does not check the data type when we assigned value to it.</li>
+<li>Typescript does check this. So it has this Type System thing. But How as we know Typescript knows javascript it uses value as it  types of the variable.</li>
+<li>Everyting works good now  But we also have design patterns in JS but some desing patterns is difficult for types to be infered automatically.</li>
+<li>Typescript comes in here it support an javascript extenstion which we can use and develope a some kind of special variable and defined what data types we need for it explicitly. that is INTERFACE and we can now use this :Typename after the variable to conforms that the object should follow this shape structure.</li>
+</ul>
+<p><em><strong>Javascript primitive data type list</strong></em></p>
+<ul>
+<li>boolean</li>
+<li>number</li>
+<li>string</li>
+<li>null</li>
+<li>symbol</li>
+<li>bigint</li>
+<li>undefined</li>
+</ul>
+</li>
+</ul>
+<p><strong>Typescript have extra things</strong></p>
+<ul>
+<li>any (allow anything)</li>
+<li>unknown(ensure someone using this type declares what the type is)</li>
+<li>never(it's not possible that this type could happen)</li>
+<li>void (function that return undefined or has not return value)</li>
+</ul>
+
+
+    </div>
+  </section>
+</body>
+
+</html>

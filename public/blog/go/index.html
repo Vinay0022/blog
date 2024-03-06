@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>MyBlog</title>
+</head>
+
+<body>
+  <section class="section">
+    <div class="container">
+      
+<h1 class="title">
+  Go
+</h1>
+<p class="subtitle"><strong>2019-11-28</strong></p>
+<ul>
+<li>The Execution speed of Go is faster than interpreted languages(the languages that are not compiled) like JS,Python,Ruby,PHP.</li>
+<li>Compiled languages like Rust, Java, C, C++, C# the compilation speed of Go is faster that is it compiles the code faster. <strong>But It does not necessarily true that the execution speed of Go is faster than the above compiled languages.</strong></li>
+</ul>
+<ul>
+<li>**Untyped meaning the type is not typed or wrote for a data e.g <code>var a = 20 or const a = 20 or a:= 30 </code></li>
+</ul>
+<ul>
+<li>factored import statement and variables declaration can also be done in factored manner</li>
+<li>packages - Go program is made up of packages.</li>
+<li>type of data is at last.</li>
+<li>Naked return.</li>
+<li><code>:-</code> only be used in inside function.</li>
+<li>Type Conversion</li>
+<li>Type inference
+when type is not declared it will automatically assume the type based on the value it has been assigned.</li>
+<li>Go has only `for loop</li>
+<li>Defer
+defer statement get executed after the surrounding function is finished executing.
+Defer function calls are pushed into stacked and the function return in LIFO manner.</li>
+<li>Dereferencing or indirecting is where a pointer is changing the value of an variable by using pointer's underlying value(value of variable).<pre data-lang="go" style="background-color:#2b303b;color:#c0c5ce;" class="language-go "><code class="language-go" data-lang="go"><span> </span><span style="color:#b48ead;">var </span><span style="color:#bf616a;">p </span><span>*</span><span style="color:#b48ead;">int
+</span><span> </span><span style="color:#bf616a;">i</span><span>:=</span><span style="color:#d08770;">41
+</span><span> </span><span style="color:#65737e;">//pointer p generates a pointer to it&#39;s operand(i.e is &#39;i&#39;)
+</span><span> </span><span style="color:#bf616a;">p </span><span>= &amp;</span><span style="color:#bf616a;">i
+</span><span> </span><span style="color:#bf616a;">fmt</span><span>.</span><span style="color:#bf616a;">Print</span><span>(</span><span style="color:#bf616a;">i</span><span>)
+</span><span> </span><span style="color:#bf616a;">fmt</span><span>.</span><span style="color:#bf616a;">Print</span><span>(</span><span style="color:#bf616a;">p</span><span>)
+</span><span> </span><span style="color:#65737e;">//*p will point to the pointer&#39;s underlying value
+</span><span> </span><span style="color:#bf616a;">fmt</span><span>.</span><span style="color:#bf616a;">Print</span><span>(*</span><span style="color:#bf616a;">p</span><span>)
+</span><span> </span><span style="color:#65737e;">//changing the value of pointer&#39;s underlying value it will also change the value of &#39;i&#39;
+</span><span> *</span><span style="color:#bf616a;">p </span><span>= </span><span style="color:#d08770;">21
+</span><span> </span><span style="color:#bf616a;">fmt</span><span>.</span><span style="color:#bf616a;">Print</span><span>(</span><span style="color:#bf616a;">i</span><span>)
+</span><span> </span><span style="color:#bf616a;">fmt</span><span>.</span><span style="color:#bf616a;">Print</span><span>(*</span><span style="color:#bf616a;">p</span><span>)
+</span><span>
+</span></code></pre>
+</li>
+<li>Structs
+Collection of Fields or it's like a data type which uses different data types.
+<ul>
+<li>Struct Literals
+Struct literal denotes the a newly allocated struct values by listing the values of it's fields.</li>
+</ul>
+</li>
+<li>Arrays</li>
+<li>Slices</li>
+</ul>
+<h4 id="values">values</h4>
+<p>Go has various data types including integer,strings,floats,booleans etc..</p>
+<h4 id="variables">variables</h4>
+<p>Variables are declared explicitly and used by the compiler to e.g. check the type-correctness of function calls.</p>
+<p><code>var</code> can delcares 1 or more variables
+Go will infer(Type inference meaning automatic detection of the (data type)type of an expression) the type of initialized variables.
+Declared variables without initialization are zero-value. e.g for an int is 0. for floats is 0.0
+<code>:=</code> is shorthand for declaring and initializing a variable. e.g var f string = &quot;apple&quot; ==&gt; f:=&quot;apple&quot;</p>
+<h4 id="constant">Constant</h4>
+<p>value cannot be changed once it has been initialized
+Constant expression perform arithmetic with arbitrary precision.
+Numeric Constant has no type , until it's given one by explicit conversion
+So it can be given a type by using it in a function that requires one type of data.
+Such as in <code>math.Sin</code>it requires  <code>float64</code> data type so that's why we convert our <code>d</code> got converted into <code>float64</code> bcuz that's what <code>math.Sin</code> requires.</p>
+<h3 id="what-is-struct">What is Struct?</h3>
+<ul>
+<li>Struct is a collection of fields(data types) or collection of different data types.</li>
+</ul>
+<h3 id="struct-literals">struct literals</h3>
+<ul>
+<li>The initializing the values of struct field implicitly is called struct literals.</li>
+<li>Another meaning of literal is a constant value. but this is not the case here.</li>
+</ul>
+<h3 id="slices">slices</h3>
+<ul>
+<li>slices in Go are references to the arrays.</li>
+<li>slices have length and capacit.</li>
+<li>slice length is the no. of elements it contains not the noraml length in java and slice capacity is the no. of elements in the underlying array.</li>
+</ul>
+
+
+    </div>
+  </section>
+</body>
+
+</html>

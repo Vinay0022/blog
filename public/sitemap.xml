@@ -1,17 +1,61 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-        <loc>https://vinay0022.github.io/blog/</loc>
+        <loc>https://blog-gamma-wheat.vercel.app/</loc>
     </url>
     <url>
-        <loc>https://vinay0022.github.io/blog/blog/</loc>
+        <loc>https://blog-gamma-wheat.vercel.app/blog/</loc>
     </url>
     <url>
-        <loc>https://vinay0022.github.io/blog/blog/first/</loc>
+        <loc>https://blog-gamma-wheat.vercel.app/blog/css/</loc>
+        <lastmod>2019-11-28</lastmod>
+    </url>
+    <url>
+        <loc>https://blog-gamma-wheat.vercel.app/blog/go/</loc>
+        <lastmod>2019-11-28</lastmod>
+    </url>
+    <url>
+        <loc>https://blog-gamma-wheat.vercel.app/blog/java/</loc>
+        <lastmod>2019-11-28</lastmod>
+    </url>
+    <url>
+        <loc>https://blog-gamma-wheat.vercel.app/blog/nextjs/</loc>
+        <lastmod>2019-11-28</lastmod>
+    </url>
+    <url>
+        <loc>https://blog-gamma-wheat.vercel.app/blog/npm-npx/</loc>
+        <lastmod>2019-11-28</lastmod>
+    </url>
+    <url>
+        <loc>https://blog-gamma-wheat.vercel.app/blog/oops/</loc>
         <lastmod>2019-11-27</lastmod>
     </url>
     <url>
-        <loc>https://vinay0022.github.io/blog/blog/second/</loc>
+        <loc>https://blog-gamma-wheat.vercel.app/blog/react/</loc>
         <lastmod>2019-11-28</lastmod>
+    </url>
+    <url>
+        <loc>https://blog-gamma-wheat.vercel.app/blog/sql/</loc>
+    </url>
+    <url>
+        <loc>https://blog-gamma-wheat.vercel.app/blog/tailwindcss/</loc>
+        <lastmod>2019-11-28</lastmod>
+    </url>
+    <url>
+        <loc>https://blog-gamma-wheat.vercel.app/blog/typescript/</loc>
+        <lastmod>2019-11-28</lastmod>
+    </url>
+    <url>
+        <loc>https://blog-gamma-wheat.vercel.app/blog/vim/</loc>
+        <lastmod>2019-11-28</lastmod>
+    </url>
+    <url>
+        <loc>https://blog-gamma-wheat.vercel.app/projects/</loc>
+    </url>
+    <url>
+        <loc>https://blog-gamma-wheat.vercel.app/projects/cafe-management-project-java/</loc>
+    </url>
+    <url>
+        <loc>https://blog-gamma-wheat.vercel.app/projects/image-compression/</loc>
     </url>
 </urlset>

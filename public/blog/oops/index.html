@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>MyBlog</title>
+</head>
+
+<body>
+  <section class="section">
+    <div class="container">
+      
+<h1 class="title">
+  OOPs
+</h1>
+<p class="subtitle"><strong>2019-11-27</strong></p>
+<ol>
+<li>
+<p>Types Of Polymorphism</p>
+<ol>
+<li>Complie Time/Static Polymorphism
+<ul>
+<li>Achieved by Method Overloading.</li>
+<li>Function/Method name is same just the parameters different.</li>
+<li>e.g Constructor. Java Decides which Constructor to run during the compile time.</li>
+</ul>
+</li>
+<li>Runtime/ Dynamic Polymorphism
+<ul>
+<li>Achieved by Method Overriding.i.e. that is function/method in parent and child class have same function name and body.</li>
+<li>Which function will be called depends on the object type and what is accessible depend on the Type of the reference.   </li>
+</ul>
+<pre data-lang="java" style="background-color:#2b303b;color:#c0c5ce;" class="language-java "><code class="language-java" data-lang="java"><span style="color:#65737e;">// Type of Reference =  Type Of Object
+</span><span style="color:#ebcb8b;">Shapes</span><span> obj    =    </span><span style="color:#b48ead;">new </span><span style="color:#ebcb8b;">Circle</span><span>();
+</span></code></pre>
+</li>
+</ol>
+</li>
+<li>
+<p>What are the 4 pillars of OOPS?</p>
+<ul>
+<li>Polymorphism</li>
+<li>Inheritence</li>
+<li>Abstraction</li>
+<li>Encapsulation</li>
+</ul>
+</li>
+<li>
+<p>What is Abstraction?</p>
+<ul>
+<li>Real Life Example : - Hiding the implementation part of the code like in java we have access to the System.out.prinln() but we don not need to know about how the println is woking internally that is abstraction. Similary In a car we need key to start the car we don't need to know how the car is getting started or engine works.</li>
+<li>If a class have one or more abstract methods then it should be declared as abstract.</li>
+<li>Abstract method only have name and parameter the body is not provided.  The Child class have to Override the Method of the parent class to provide the body.</li>
+<li>Abstract class does not contain Abstract Constructors.  It can have constructors though. and the child class need to use super keyword to access it.  It can have instance variables but to initialize those we need to create constructor (note i do not say Absctract Constructors it's just a normal constructor here )either in child or parent class.</li>
+<li>It can contain static methods.</li>
+<li>It can have all access modifiers.</li>
+</ul>
+</li>
+<li>
+<p>What is encapsulation?</p>
+<ul>
+<li>The process of hiding the data in one entity or class is known as encapsulation. It is also known as data hiding.</li>
+<li>It can be achieved by acces modifiers.</li>
+<li>Real life example :- Capsul(Medicine) is a mixture of medicines stored in one containet known as capsul. We don't know what mixture of medicines are present inside the data it's hidden from us.</li>
+</ul>
+</li>
+<li>
+<p>What is interface?</p>
+<ul>
+<li>they have abstract functions (no body of functions).</li>
+<li>Interface is like class but not completely. it is like an abstract class.  By default functions are public and abstract in interface.  variables are final and static by default in interface.</li>
+<li>Interfaces specify only what the class is doing, not how it is doing it.</li>
+<li>Using interface, you can specify a set of methods that can be implemented by one or more classes.</li>
+<li>Although they are similar to abstract classes, interfaces have an additional capability:</li>
+<li>A class can implement more than one interface. By contrast, a class can only inherit a single superclass  (abstract or otherwise).</li>
+</ul>
+</li>
+<li>
+<p>What is Polymorphism?</p>
+<ul>
+<li>Act of representing thing in multiple ways.</li>
+</ul>
+</li>
+<li>
+<p>What is Object Oriented Programming and Procedural Programming?</p>
+<ul>
+<li>Object Oriented Programming is used to solve real world problems.  object oriented means you're dealing with objects, procedural means you're dealing with procedures,which is another way to say linear execution of statements .if you have objects you can encapsulate those procedures in a more meanignful way  .but languages typically aren't fully OOP or fully procedural, they're usually a mix of the two with additional features sprinkled here and there  java is built around OOP principles but it's multi-paradigm</li>
+</ul>
+</li>
+</ol>
+
+
+    </div>
+  </section>
+</body>
+
+</html>

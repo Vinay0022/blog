@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>MyBlog</title>
+</head>
+
+<body>
+  <section class="section">
+    <div class="container">
+      
+<h1 class="title">
+  React
+</h1>
+<p class="subtitle"><strong>2019-11-28</strong></p>
+<h3 id="concepts">Concepts</h3>
+<ul>
+<li>Component
+<ul>
+<li>It's a piece of reusable code which represents it own logic and appearance.UI is made up of many these components and sometimes entire page. It's is a javascript function that return a markup here JSX markup is used . JSX is combination of both javascript and html. The name of component must start with captial letter like MyButton and html with lowercase. It return only one element e.g div tag so in order to
+use multiple tags we need to wrap them inside</li>
+</ul>
+</li>
+</ul>
+<pre data-lang="javascript" style="background-color:#2b303b;color:#c0c5ce;" class="language-javascript "><code class="language-javascript" data-lang="javascript"><span>&lt;div&gt;
+</span><span>&lt;/</span><span style="color:#bf616a;">div</span><span>&gt;
+</span></code></pre>
+<p>or a wrapper</p>
+<pre data-lang="javascript" style="background-color:#2b303b;color:#c0c5ce;" class="language-javascript "><code class="language-javascript" data-lang="javascript"><span>&lt;\&gt;...\&lt;/\&gt;
+</span></code></pre>
+<ul>
+<li>Escaping the JSX We can escape the JSX and use javascript so we can embed our variable and display it by using {} curly braces. we can also use this inside a className attributes like <em>src={}</em></li>
+</ul>
+<h3 id="state">state</h3>
+<ul>
+<li>which holds some information which we want to display. Suppose we have two same components and we are nesting it in a Main component then these two will have it's own state.</li>
+</ul>
+<h3 id="conditional-rendering">conditional rendering</h3>
+<ul>
+<li>
+<p>It is important part We can render a list using some condition. For condition we can use if else statement or ternary operator condtion <em>?</em> but the ternary operator works inside the JSX while if else not.</p>
+</li>
+<li>
+<p>If else example</p>
+</li>
+</ul>
+<pre data-lang="javascript" style="background-color:#2b303b;color:#c0c5ce;" class="language-javascript "><code class="language-javascript" data-lang="javascript"><span style="color:#b48ead;">let </span><span style="color:#bf616a;">content</span><span>;
+</span><span style="color:#b48ead;">if </span><span>(</span><span style="color:#bf616a;">isLoggedIn</span><span>)
+</span><span>{ </span><span style="color:#bf616a;">content </span><span>= &lt;AdminPanel /&gt;;
+</span><span>}
+</span><span style="color:#b48ead;">else
+</span><span>{ </span><span style="color:#bf616a;">content </span><span>= &lt;LoginForm /&gt;{=</span><span style="color:#bf616a;">html</span><span>}; }
+</span><span style="color:#b48ead;">return </span><span>(
+</span><span>&lt;div&gt;
+</span><span>    {</span><span style="color:#bf616a;">content</span><span>}
+</span><span>&lt;/</span><span style="color:#bf616a;">div</span><span>&gt;
+</span><span>);
+</span></code></pre>
+<h3 id="rendering-lists">Rendering lists</h3>
+<ul>
+<li>mapping is important concept one must learn it. map works like this
+in below code the function can be an anonymous arrow function.</li>
+</ul>
+<pre data-lang="javascript" style="background-color:#2b303b;color:#c0c5ce;" class="language-javascript "><code class="language-javascript" data-lang="javascript"><span style="color:#bf616a;">array</span><span>.</span><span style="color:#8fa1b3;">map</span><span>(</span><span style="color:#b48ead;">function</span><span>(</span><span style="color:#bf616a;">parameters</span><span>(</span><span style="color:#bf616a;">first parameter is each
+</span><span style="color:#bf616a;">item</span><span>)){</span><span style="color:#65737e;">//body of the function}
+</span></code></pre>
+<ul>
+<li>arrow function version</li>
+</ul>
+<pre data-lang="javascript" style="background-color:#2b303b;color:#c0c5ce;" class="language-javascript "><code class="language-javascript" data-lang="javascript"><span style="color:#bf616a;">array</span><span>.</span><span style="color:#8fa1b3;">map</span><span>((</span><span style="color:#bf616a;">parameters</span><span>)</span><span style="color:#b48ead;">=&gt;</span><span>{</span><span style="color:#65737e;">//body of the function}
+</span></code></pre>
+<h3 id="hooks">Hooks</h3>
+<ul>
+<li>Hooks are inbuilt functions in React they start with use like useState
+<ol>
+<li>useState</li>
+</ol>
+<ul>
+<li>useState  is used to keep the track of one date and to set it whenever we want it.</li>
+</ul>
+<ol start="2">
+<li>useReducer</li>
+</ol>
+<ul>
+<li>It is mostly when you have two or more states and your changing that states at the same time in same element(e.g button)</li>
+</ul>
+<ol start="3">
+<li>useEffect</li>
+</ol>
+<ul>
+<li>It is mostly used for API calls. Note you should pass empty array at the end  so the api will get called once if you don't want any specific state to call it.If you want any specific state to call it after it changes then you should pass the name of the state inside the array.</li>
+</ul>
+<ol start="4">
+<li>useRef</li>
+</ol>
+<ul>
+<li>If you think you can solve a particular task with vanilla js then you should use useRef. or it is very useful when you want to manipulate dom and access DOM. e.g. is focusing on input or clearning an input after clicking the add button in todo-list.</li>
+</ul>
+<ol start="5">
+<li>useLayoutEffect</li>
+</ol>
+<ul>
+<li>It triggers even at the same time of first rendering.It is called before the useEffect. so it's useful when you want to display something before the data is getting displayed like UI stuff. but if you still decided to use useEffect then you can see the data which was before appeared and disappeared in a milliseconds. because it gets rendered after the first render.</li>
+<li>But most of the times it's better to avoid to use useLayoutEffect because of the performance issue.</li>
+</ul>
+</li>
+</ul>
+<ol start="6">
+<li>useImperativeHandle
+<ul>
+<li>It can be used to change/use the state which is inside a child state or the child state can be in separate file also and changing is done via the parent component.Note it requires to make the child component as forwardref.</li>
+</ul>
+</li>
+<li>useContext
+<ul>
+<li>It is used when we have one or more state and instead of passing the props(in our case states) to each child . we can just wrap it in a AppContext.Provider and access the values in child component.It makes more sense to use it .if the child component have lots of props. Note Child Component need useContext in it and we can create context using creatContext in parent component.</li>
+</ul>
+</li>
+</ol>
+<h3 id="routing-with-react-router-dom">Routing(with react-router-dom)</h3>
+<ul>
+<li>3 things we need to import first BrowserRouter , Routes, Route</li>
+<li>BrowserRouter or Router provides where we can use the react-router-dom. like if we put Link outside the BrowserRouter it cannot work because Link is part of reac-router-dom. It needs to be inside the BrowserRouter so we can use it.</li>
+<li>Routes includes list of Route we want to have.</li>
+<li>Route just provides the path.</li>
+<li>For navigation through website there is <em>Link</em> Component. as the name says it provides link like 'a' tag in html;</li>
+</ul>
+<h3 id="react-js-and-node-js">React Js and Node Js</h3>
+<ul>
+<li>To create react with frontend and Backend(API + Server) with node. We need to have two folders one for backend and other one is our react frontend project folder.</li>
+<li>In frontend we require axios which is used for data fetching.</li>
+<li>In backend(backend folder) we need to install express, cors,mysql,bcrypt,body-parse, express-session , cookie-parser . All of this dependency is also called middlewares. Middlewares is a software or functions that have access to the request and response objects and can perform various tasks such as modifying the request or response, terminating the request-response cycle, or passing control to the next middleware in the stack.</li>
+<li>Middlewares as the name says it runs between request send by client(browser) and response sent by the server.</li>
+<li>( ) Let's see what's the purpose of each of this dependency
+<ol>
+<li>express is used for handling the HTTP requests, routing</li>
+<li>cors(cross-origin resource sharing) is a protocol  which is used so we can be allowed  to use script which is running on client to interact with the resources from different domain i.e allow to send data from client to server.</li>
+<li>mysql is used for setting up the connection with MySQL database.</li>
+<li>bcrypt is used for hasing passwords we used with salts so we can add layer of security to it. it is nothing but adding some random text at the end of password.
+For Cookies and Session</li>
+<li>we need to add origin,methods(like GET,POST) , credentials in app.use(cors({...})) for using cookies.</li>
+<li>body-parser we need body-parse to parse the data comming from client (i.e. urlencoded data it's a data that is in the url that is data of form when we submit form with method POST and it's in the form of urlencoded data it follows the format like key-value paris, space is represented as %, key and values are separated with = and different key-value pairs are separated using &amp;). it parsed the urlencoded data(it converts the data typically into an object in the request body) and the parsed data can be accessed  in the router handler through req.body i.e. request body.</li>
+<li>express-session to create a session so we can save it and use it to check if user is already loggedin or not it contains methods like  key: &quot;userId&quot;,
+secret: &quot;socks&quot;,
+resave: false,
+saveUninitialized: false,
+cookie: {
+expires: 60 * 60 * 24,
+}.</li>
+</ol>
+</li>
+</ul>
+
+
+    </div>
+  </section>
+</body>
+
+</html>
