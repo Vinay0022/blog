@@ -1,5 +1,6 @@
 +++
 title = "Cafe Management Project"
+date = 2024-03-07
 +++
 
 ### Things must know

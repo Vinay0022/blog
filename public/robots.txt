@@ -1,4 +1,0 @@
-User-agent: *
-Disallow:
-Allow: /
-Sitemap: https://blog-gamma-wheat.vercel.app/sitemap.xml
