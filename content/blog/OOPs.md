@@ -1,6 +1,7 @@
 +++
 title = "OOPs"
 date = 2019-11-27
+toc= true
 +++
 
 1. Types Of Polymorphism

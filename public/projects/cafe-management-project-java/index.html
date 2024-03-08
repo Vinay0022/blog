@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <!-- Link to Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+
+<link rel="stylesheet" href="https://blog-gamma-wheat.vercel.app/project-page.css" >
+
+
+  <title>MyBlog</title>
+</head>
+
+<body>
+
+  <section class="section">
+
+    <div class="container">
+      
+<div class="container-project-page">
+<h1 class="title">
+  Cafe Management Project
+</h1>
+<p class="subtitle"><strong>2024-03-07</strong></p>
+<h3 id="things-must-know">Things must know</h3>
+<ul>
+<li>
+<p>Netbeans</p>
+<ul>
+<li>For undecorating the window select the undecorated in the Frame properites it will disable the minimize , exit and maximize option in the window after running.</li>
+<li>For generating the window at the center of the screen tick the Generate Center option in the code tabe of the frame.</li>
+</ul>
+</li>
+<li>
+<p>What is JFrame?</p>
+<ul>
+<li>It's like a page.</li>
+<li>JFrame is a class type container which inherits the java.awt.Frame class.</li>
+<li>It acts likes a main window which holds the components like buttons, fields, texts etc and a GUI is created.</li>
+</ul>
+</li>
+<li>
+<p>What is JPanel?</p>
+<ul>
+<li>It's like a canvas board on the wooden frame.</li>
+<li>JPanel Will holds the componets together.</li>
+<li><em>You need absolute layout so components can be placed on top of each other.</em></li>
+<li>Colors are only applicable to JPanel not for JFrame.</li>
+</ul>
+</li>
+<li>
+<p>Difference between JPanel And JFrame?</p>
+<ul>
+<li>JPanel is added on top of JFrame and JPanel extend the JFrame.</li>
+<li>JPanel is a container whose parent is java.swing.JComponent.(JSwing)</li>
+<li>JFrame is a container whose parent is java.awt.Frame.(Abstract Window Toolkit(awt)).</li>
+<li>Colors are only applicable to JPanel not for JFrame.</li>
+</ul>
+</li>
+<li>
+<p>How to set the password visible and invisible in JPasswordField</p>
+<ul>
+<li>Use setEchoChar((char)0) method in JPasswordField to show the characters while typing</li>
+<li>Use setEchoChar('*') method in JPasswordField to make all the characters look * while typing.</li>
+</ul>
+</li>
+<li>
+<p>How to make the Username input box to detect if the user have inputed number and give them warning.</p>
+<ul>
+<li>Make a basic if condition that if the inputed character is not between 0 and 9 then it will return true right so you surround that with not making it like if the character are alphabate then it will always return true and the not condition will return false then if will not run if it's vice-e-versa then shows a jOptionPane.showMessageDialog and give warning.</li>
+</ul>
+</li>
+<li>
+<p>How to add dragging functionality for window</p>
+<ul>
+<li>make a 2 global variables xx and yy which will hold the co-ordinates of the mouse relative to the jPanel when clicked.</li>
+<li>We need to events MouseClicked and MouseDragged.</li>
+<li>MouseClicked it will store the values of mousepointer relative to the jPanel via getX() and getY() methods of evt i.e. event object.</li>
+<li>MouseDragged event will store the value of XOnScreen and YOnScreen co-ordinates value relative to the screen and store in x and y variables.</li>
+<li>Then we will set the location of the window inside the MouseDragged event based on the difference between the current sceen co-ordinates i.e. x and y and the inital xx and yy.</li>
+</ul>
+</li>
+<li>
+<p>A glowing effect for sign up</p>
+<ul>
+<li>It's not that important but you can try it for fun.</li>
+<li>You can use for loop with double as initiliazor and inside it you need a String variable which will hold the value of 'i' and then parse it into float and store it in variable and use this for opacity setOpacity(float);</li>
+</ul>
+</li>
+<li>
+<p>What is PreparedStatment and why we use it?</p>
+<ul>
+<li>PreparedStatment allows you to set parameters in the SQL query, which helps to prevent SQL injection. Paremeters can be set using setter methods such as setInt, setString, setDouble,... etc.</li>
+<li>To create an instance of PreparedStatment we use preparedStatement() method of Connection interface.</li>
+</ul>
+</li>
+<li>
+<p>JFileChooser</p>
+</li>
+<li>
+<p>All Frames and models</p>
+<ul>
+<li>Reji and AdminReji holds the sql instructions and methods of it.</li>
+<li>Product and Admin holds the structure of the data and setters and getters of that data.</li>
+</ul>
+</li>
+<li>
+<p>What will happen if you remove the jTable1.setModel from ManageProductFrame</p>
+<ul>
+<li>The line is responsible for setting a new model for the jTable1</li>
+<li>If we comment it out then the JTable1 will not be updated it will remain the same and after this line getallProducts function is called which will retrive the updated data from the database and new row will be added in the JTable1 because the previous one was not removed.</li>
+<li>jTable1.setModel(new DefaultTableModel(null, new Object[]{&quot;ID&quot;,&quot;Name&quot;,&quot;Price&quot;,&quot;Image&quot;}));</li>
+<li>In the above code we set the New DefaultTableModel of jTable1 it takes 2 parameters one is data and other is columnNames. data is set to null and columnNames is set to what was it before.
+<em>ResultSet in Java.SQL starts the index from 1.</em></li>
+</ul>
+</li>
+<li>
+<p>LocalDate and DateTimeFormatter</p>
+<ul>
+<li>Use the LocalDate to get the current date and formate it using the DateTimeFormatter and set it's lable.</li>
+</ul>
+</li>
+<li>
+<p>Tech Stack</p>
+<ul>
+<li>Frontend</li>
+<li>JSwing</li>
+<li>JFrame</li>
+<li>Database</li>
+<li>MySQL</li>
+</ul>
+</li>
+</ul>
+<h2 id="structure-of-database-and-frames-models">Structure of Database and Frames , models</h2>
+<h4 id="admin-table">Admin Table</h4>
+<ul>
+<li>id</li>
+<li>username</li>
+<li>password</li>
+<li>s_ques</li>
+<li>ans</li>
+</ul>
+<h3 id="cart-table">Cart Table</h3>
+<ul>
+<li>cart id</li>
+<li>product id</li>
+<li>product name</li>
+<li>qty</li>
+<li>price</li>
+<li>total</li>
+</ul>
+<h3 id="product-table">Product Table</h3>
+<ul>
+<li>id</li>
+<li>name</li>
+<li>price</li>
+<li>image</li>
+</ul>
+<h3 id="payment-table">Payment Table</h3>
+<ul>
+<li>payment id(pid)</li>
+<li>customer Name(cName)</li>
+<li>products id(proid)</li>
+<li>product Name(pName)</li>
+<li>totalPrice(total)</li>
+<li>pdate</li>
+</ul>
+<h3 id="steps">Steps</h3>
+<ul>
+<li>
+<p>First Create all the Fronted using JFrame and JPanel i.e JSwing and AWT.</p>
+<ul>
+<li>HomeFrame</li>
+<li>ViewOrdersFrame</li>
+<li>SignUpFrame</li>
+<li>StatisticsFrame</li>
+<li>OrderFrame</li>
+<li>ManageProductFrame</li>
+<li>CartFrame</li>
+<li>AllProductsFrame</li>
+<li>ForgotPasswordFrame</li>
+<li>SignUpFrame</li>
+<li>LoginFrame</li>
+</ul>
+</li>
+<li>
+<p>Second Create all logic for the Frames(java files for it) Netbeans will create automatically for it.</p>
+<ul>
+<li>Home</li>
+<li>ViewOrders</li>
+<li>SignUp</li>
+<li>Statistics</li>
+<li>Order</li>
+<li>ManageProduct</li>
+<li>Cart</li>
+<li>AllProducts</li>
+<li>ForgotPassword</li>
+<li>SignUp</li>
+<li>Login</li>
+</ul>
+</li>
+<li>
+<p>Create database cafe</p>
+<ol>
+<li>admin
+<ul>
+<li>Sign Up data is stored in the admin table.</li>
+</ul>
+</li>
+<li>cart
+<ul>
+<li>It contains the data of the tableContents from CartFrame.</li>
+</ul>
+</li>
+<li>product
+<ul>
+<li>It contains the data from the ManageProductFrame's tableContents.</li>
+</ul>
+</li>
+<li>payment
+<ul>
+<li>It contains the data from the ViewOrdersFrame's tableContents;</li>
+</ul>
+</li>
+</ol>
+</li>
+<li>
+<p>Models</p>
+<ul>
+<li>Dao(Data Access Object) holds all the method  that run the quries for all the frames excluding Admin and AdminDao holds the sql instructions for Admin and methods of it.</li>
+<li>Admin, Product, Payment, Cart, Calculate holds the structure of the data and setters and getters of that data.</li>
+<li>MyConnection  contains the logic related to establish the connection to the mariadb database.</li>
+</ul>
+</li>
+<li>
+<p>Working of Frames</p>
+</li>
+</ul>
+<ol>
+<li>Login</li>
+</ol>
+<ul>
+<li>
+<p>Successful Login</p>
+<ul>
+<li>First we need to create and Object of AdminDao model because we need to use the queries of AdminDao to check if the username , password is correct or username exist or not.</li>
+<li>When you fill up all the login Field username, password and pressed login it will get the string from the inputField(username,password) and put it inside a variable and will run the SQL query of the model AdminDao through the Object we have created.</li>
+<li>It will get the maxId from the admin table  and return maxId+1 to make sure there is at least one admin.</li>
+<li>Now it check if the admin exist or not AdminDao SQL query and etc.</li>
+</ul>
+</li>
+<li>
+<p>Unsuccessful Login</p>
+<ul>
+<li>If the username is incorrect it will promte and error message.</li>
+</ul>
+</li>
+<li>
+<p>User does not exit</p>
+<ul>
+<li>It will promte a warning window and show message to sign up.</li>
+<li>After clicking Sign Btn it will close the Login page by making it's visiblity false and show Sign Up Frame.</li>
+<li>Sign Up also needs to have Object of AdminDao because it contains the SQL Qeuries for inserting the Admin to the database which will be triggered after clicking the saveBtn and also it will run the query to get the maxId and return max+Id so it will be the Id for new User.</li>
+<li>It will check if user name exist or not from the AdminDao SQL Query. If it doesn't then it will create an Object of Admin to set up the admin variables via setters.then this admin object is passed to the insert method of AdminDao which will run SQL query and get the parameters for it via the getters of admin.</li>
+</ul>
+</li>
+</ul>
+<ol start="2">
+<li>Order</li>
+</ol>
+<ul>
+<li></li>
+</ul>
+
+</div>
+
+    </div>
+  </section>
+</body>
+
+</html>
